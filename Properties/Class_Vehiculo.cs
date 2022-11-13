@@ -29,6 +29,9 @@ namespace tp_final.Properties
         public int Capacidad_Tanque { get; }
         public float Consumo_Tanque { get; }
 
+        protected Stack<eBarrios> = new Stack<eBarrios>();
+
+
         
 
         public static uint Max_ID = 0;
