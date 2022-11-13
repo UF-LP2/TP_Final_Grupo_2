@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 ///
 namespace tp_final.Properties
 {
-    public class Class_Camioneta : Class_Vehiculo
+    internal class Class_Camioneta : Class_Vehiculo
     {
-        public Class_Furgoneta() : base(176, 439.7, 186, 688, 50) { }
+        public Class_Camioneta() : base(176, 439.7F, 186, 688, 50, 1.2F) { }
     }
 }

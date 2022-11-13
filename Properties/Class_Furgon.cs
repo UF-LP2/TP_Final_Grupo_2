@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace tp_final.Properties
 {
-    public class Class_Furgon : Class_Vehiculo
+    internal class Class_Furgon : Class_Vehiculo
     {
-        public Class_Furgoneta() : base(219, 725.4, 289.4, 2519, 100) { }
+        public Class_Furgon() : base(219, 725.4F, 289.4F, 2519, 100, 1.2F) { }
     }
 }
