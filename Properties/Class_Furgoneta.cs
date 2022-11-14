@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 ///https://www.coches.net/fichas_tecnicas/fiat/ducato/industriales/4-puertas/35_maxi_23_multijet_furgon_largo_l_alto_120cv_diesel/25544/742635820061001/
 namespace tp_final.Properties
 {
-    internal class Class_Furgoneta : Class_Vehiculo
+    public class Class_Furgoneta : Class_Vehiculo
     {
         public Class_Furgoneta() : base(205, 636.3F, 252.4F, 2060, 125, 1.2F) { }
     }

@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace tp_final
 {
-    internal class Class_Pedido
+    public class Class_Pedido
     {
-        enum eBarrios
-        {
-            Agronomia, Almagro, Almirante_Brown, Balbastro, Balvanera, Barracas,
-            Barrio_Norte, Belgrano, Boca, Boedo, Bonorino, Buenos_Aires, Caballito, Cafferata,
-            Calaza, Centro, Chacarita, Ciudad_Autonoma_de_Buenos_Aires, Coghlan, Colegiales,
-            Colelache, Colhue_Huapi, Comandante_L_Piedrabuena, Congreso, Constitucion, Dolavon,
-            Dos_Pozos, El_Maiten, El_Sombrero, Emilio_Mitre, Epuyen, Escalante, Facundo, Flores,
-            Floresta, Gan_Gan, General_Jose_de_San_Martin, Isla_Demarchi, Lacarra, Liniers, Los_Perales,
-            Luis_J_Garcia, Marcelo_Torcuato_de_Alvear, Mataderos, Monte_Castro, Montserrat, Nazca, Nueva_Chicago,
-            Nueva_Pompeya, Nunez, Once, Palermo, Parque_Chacabuco, Parque_Chas, Parque_Patricios, Paternal, Presidente_Rivadavia,
-            Presidente_Roque_Saenz_Pena, Primera_Junta, Puerto_Madero, Puerto_Nuevo, Pueyrredon, Ramon_L_Falcon,
-            Recoleta, Retiro, Saavedra, San_Cristobal, San_Telmo, Simon_Bolivar, Tellier, Varela, Velez_Sarsfield,
-            Versailles, Villa_Crespo, Villa_del_Parque, Villa_Devoto, Villa_General_Mitre, Villa_Lamadrid,
-            Villa_Lugano, Villa_Luro, Villa_Ortuzar, Villa_Real, Villa_Riachuelo, Villa_Santa_Rita, Villa_Soldati,
-            Villa_Urquiza
-        };
+        public string? producto { get; set; }
+        public float precio { get; set; }
+        public float largo { get; set; }
+        public float ancho { get; set; }
+        public float alto { get; set; }
+        public int volumen { get; set; }
+        public int peso { get; set; }
+        public int prioridad { get; set; }
+        public string? barrio { get; set; }
+        public DateTime fecha { get; set; }
+        public int ID { get; set; }
+        public static int maxID { get; set; }
+
+        public bool cargado;
 
 
     }
