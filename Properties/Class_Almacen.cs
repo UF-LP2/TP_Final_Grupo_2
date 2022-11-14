@@ -8,6 +8,8 @@ namespace tp_final.Properties
 {
     internal class Class_Almacen
     {
+        
+
         enum eBarrios{Agronomia, Almagro, Almirante_Brown, Balbastro, Balvanera, Barracas, Barrio_Norte,
         Belgrano, Boca, Boedo, Bonorino, Buenos_Aires, Caballito, Cafferata, Calaza, Centro, Chacarita,
         Ciudad_Autonoma_de_Buenos_Aires, Coghlan, Colegiales, Colelache, Colhue_Huapi, Comandante_L_Piedrabuena,
@@ -20,10 +22,28 @@ namespace tp_final.Properties
         Varela, Velez_Sarsfield, Versailles, Villa_Crespo, Villa_del_Parque, Villa_Devoto, Villa_General_Mitre,
         Villa_La_madrid, Villa_Lugano, Villa_Luro, Villa_Ortuzar, Villa_Real, Villa_Riachuelo, Villa_Santa_Rita,
         Villa_Soldati, Villa_Urquiza}
+        
+
+        public Dictionary<string, (string,string)> CargarCoordenadas()
+        {
+            Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
+            string ubicacionArchivo = "Coordenadas.csv";
+            System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
+            string separador = ",";
+            string linea;
+            
+            // Si el archivo no tiene encabezado, elimina la siguiente línea
+            archivo.ReadLine(); // Leer la primera línea pero descartarla porque es el encabezado
+            while ((linea = archivo.ReadLine()) != null)
+            {
+                string[] fila = linea.Split(separador);
+                Coordenadas.Add(fila[0], (fila[1], fila[2]));
+            }
+            return Coordenadas;
+        }
 
 
-        
-        
-        
+
+
     }
 }
