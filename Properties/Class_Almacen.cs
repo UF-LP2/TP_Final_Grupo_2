@@ -51,7 +51,32 @@ namespace tp_final.Properties
         {
             Console.WriteLine(Coordenadas.Count);
         }
-
+        public void Actualiacionfechas()
+        {
+            for (int i = 0; i < lista_pedidos.Count; i++)
+            {
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].tipo == "NORMAL")
+                {   
+                    lista_pedidos[i].prioridad = 1;
+                }
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].tipo == "NORMAL")
+                {
+                    lista_pedidos[i].prioridad = 2;
+                }
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].tipo == "DIFERIDO")
+                {
+                    lista_pedidos[i].prioridad = 3;
+                }
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].tipo == "DIFERIDO")
+                {
+                    lista_pedidos[i].prioridad = 2;
+                }
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 72 && lista_pedidos[i].tipo == "DIFERIDO")
+                {
+                    lista_pedidos[i].prioridad = 1;
+                }
+            }
+        }
 
         public void Llenado(Class_Vehiculo vehiculo)
         {

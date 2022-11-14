@@ -9,6 +9,7 @@ namespace tp_final
     public class Class_Pedido
     {
         public string? producto { get; set; }
+        public string? tipo { get; set; }
         public float precio { get; set; }
         public float largo { get; set; }
         public float ancho { get; set; }
