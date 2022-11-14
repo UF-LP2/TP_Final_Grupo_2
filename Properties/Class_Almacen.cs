@@ -24,19 +24,20 @@ namespace tp_final.Properties
     {
         public Dictionary<string, (string, string)> Coordenadas { get; }
         List<string> CoordenadasList { get; }
+        List<Class_Pedido> lista_pedidos { get; }
         public Class_Almacen()
         {
             Coordenadas = CargarCoordenadas();
         }
-        
-        public Dictionary<string, (string,string)> CargarCoordenadas()
+
+        public Dictionary<string, (string, string)> CargarCoordenadas()
         {
             Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
             string ubicacionArchivo = "D:\\Repos\\TP_Final_Grupo_2\\Coordenadas.csv";
             System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
             string separador = ",";
             string linea;
-            
+
             // Si el archivo no tiene encabezado, elimina la siguiente línea
             archivo.ReadLine(); // Leer la primera línea pero descartarla porque es el encabezado
             while ((linea = archivo.ReadLine()) != null)
@@ -52,7 +53,63 @@ namespace tp_final.Properties
         }
 
 
-        //hola
+        public void Llenado(Class_Vehiculo vehiculo)
+        {
+            Class_Pedido pedido_aux = new Class_Pedido();
+            int i, j;
+            float sumVol = 0;
+            int newCantPedidos = 0;
+            int sumPeso = 0;
 
+            for (i = 0; i < lista_pedidos.Count - 1; i++)    //ordeno segun prioridad de mayor prioridad (1) a menor
+            {
+                for (j = i + 1; j < lista_pedidos.Count; j++)
+                    if (lista_pedidos[i].prioridad > lista_pedidos[j].prioridad)
+                    {
+                        pedido_aux = lista_pedidos[i];
+                        lista_pedidos[i] = lista_pedidos[j];
+                        lista_pedidos[j] = pedido_aux;
+                    }
+            }
+
+            for (i = 0; i < lista_pedidos.Count; i++)   //me fijo en terminos de volimen cuantos pedidos entran
+            {
+                if (sumVol + lista_pedidos[i].volumen < vehiculo.Vol_Max && lista_pedidos[i].cargado == false)
+                {
+                    sumVol += lista_pedidos[i].volumen;
+                    newCantPedidos++;
+                }
+            }
+
+            int[,] matriz = new int[newCantPedidos + 1, vehiculo.Peso_Max + 1];
+
+            for (i = 0; i <= newCantPedidos; i++)
+            {
+                for (j = 0; j <= vehiculo.Peso_Max; j++)
+                {
+                    if (i == 0 || j == 0)
+                    {
+                        matriz[i, j] = 0;
+                    }
+                    else if (lista_pedidos[i - 1].peso <= j)
+                    {
+                        matriz[i, j] = Math.Max(lista_pedidos[i - 1].prioridad + matriz[i - 1, j - lista_pedidos[i - 1].peso],
+                                                  matriz[i - 1, j]);
+                        if (lista_pedidos[i - 1].prioridad + matriz[i - 1, j - lista_pedidos[i - 1].peso] > matriz[i - 1, j]
+                            && lista_pedidos[i - 1].cargado == false
+                            && sumPeso + lista_pedidos[i - 1].peso < vehiculo.Peso_Max)
+                        {
+                            vehiculo.Pedidos.Add(lista_pedidos[i - 1]);
+                            lista_pedidos[i - 1].cargado = true;
+                            sumPeso += lista_pedidos[i - 1].peso;
+                        }
+                    }
+                    else
+                    {
+                        matriz[i, j] = matriz[i - 1, j];
+                    }
+                }
+            }
+        }
     }
 }
