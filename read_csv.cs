@@ -23,7 +23,7 @@ namespace csvfiles {
                         ancho = csv.GetField<float>("ancho"),
                         largo = csv.GetField<float>("largo"),
                         alto = csv.GetField<float>("alto"),
-                        //peso = csv.GetField<int>("peso"),
+                        peso = csv.GetField<int>("peso"),
                         prioridad = csv.GetField<string>("prioridad"),
                         barrio = csv.GetField<string>("barrio"),
                         fecha = new DateTime(csv.GetField<int>("fecha"))

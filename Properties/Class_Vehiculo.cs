@@ -58,6 +58,11 @@ namespace tp_final.Properties
         {
             this.Pedidos = Aux;
         }
+
+        public void setVol_Max(int volumen)
+        {
+            this.Vol_Max = volumen;
+        }
         public void MostrarAlgo()
         {
             for (int i = 0; Recorrido.Count != 0; i++)
@@ -105,7 +110,7 @@ namespace tp_final.Properties
             DistanciaTot += min;
             if(DistanciaTot > autonomia)
             {
-                Console.WriteLine("En el barrio: %d se debera cargar combustible",aux);
+                Console.WriteLine("En el barrio: {0} se debera cargar combustible",aux);
             }
             return aux;
         }
@@ -122,7 +127,7 @@ namespace tp_final.Properties
         public Dictionary<string, (string, string)> CargarCoordenadas()
         {
             Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
-            string ubicacionArchivo = "D:\\Repos\\TP_Final_Grupo_2\\Coordenadas.csv";
+            string ubicacionArchivo = "C:\\Users\\Dolo\\source\\repos\\TP_Final_Grupo_2--\\Coordenadas.csv";
             System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
             string separador = ",";
             string linea;
@@ -141,7 +146,7 @@ namespace tp_final.Properties
 
             var random = new Random();
 
-            var value = random.Next(1, 100000);
+            var value = random.Next(1, 1000);
             /*float RadTierra = 6378.0F;
 
             var difLatitud = (posDestino.Latitud – posOrigen.Latitud).EnRadianes();

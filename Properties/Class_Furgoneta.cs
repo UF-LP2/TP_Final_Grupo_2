@@ -10,5 +10,7 @@ namespace tp_final.Properties
     public class Class_Furgoneta : Class_Vehiculo
     {
         public Class_Furgoneta() : base(205, 636.3F, 252.4F, 2060, 125, 6.9F) { }
+       
+
     }
 }

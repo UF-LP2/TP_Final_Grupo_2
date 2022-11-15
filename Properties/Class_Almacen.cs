@@ -32,12 +32,12 @@ namespace tp_final.Properties
 
         public void InicializarValor()
         {
-            for(int i = 0; i< lista_pedidos.Count; i++)
+            for (int i = 0; i < lista_pedidos.Count; i++)
             {
                 if (lista_pedidos[i].prioridad == "express")
                 {
                     lista_pedidos[i].valor = 3;
-                }else if (lista_pedidos[i].prioridad == "normal")
+                } else if (lista_pedidos[i].prioridad == "normal")
                 {
                     lista_pedidos[i].valor = 2;
                 }
@@ -52,8 +52,8 @@ namespace tp_final.Properties
         {
             for (int i = 0; i < lista_pedidos.Count; i++)
             {
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].prioridad == "normal")
-                {   
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].prioridad == "normal")
+                {
                     lista_pedidos[i].valor = 3;
                 }
                 if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "normal")
@@ -83,7 +83,7 @@ namespace tp_final.Properties
             int newCantPedidos = 0;
             int sumPeso = 0;
 
-            for (i = 0; i < lista_pedidos.Count - 1; i++)    //ordeno segun prioridad de mayor prioridad (1) a menor
+            for (i = 0; i < lista_pedidos.Count - 1; i++)    //ordeno segun prioridad de mayor prioridad a menor
             {
                 for (j = i + 1; j < lista_pedidos.Count; j++)
                     if (lista_pedidos[i].valor > lista_pedidos[j].valor)
@@ -132,6 +132,23 @@ namespace tp_final.Properties
                     }
                 }
             }
+            for (int k = 0; k < lista_pedidos.Count; k++)
+            {
+                if (lista_pedidos[k].cargado==true)
+                    lista_pedidos.Remove(lista_pedidos [k]);
+            }
+
+            for (int k = 0; k < vehiculo.Pedidos.Count; k++)
+            {
+                Console.WriteLine("{0}", vehiculo.Pedidos[k].producto);
+            }
+
+            Console.WriteLine("LISTA EN ALMACEN");
+            for (int k = 0; k < lista_pedidos.Count; k++)
+            {
+                Console.WriteLine("{0}",lista_pedidos[k].producto);
+            }
         }
+        
     }
 }
