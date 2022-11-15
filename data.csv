@@ -1,99 +1,99 @@
 producto,precio,ancho,largo,alto,peso,prioridad,barrio,fecha
-monitor,18349.89,71.48,99.74,58.58,10,diferido,san isidro,44903
-impresoras,57644.43,14.46,99.03,47.06,5,diferido,vicente lopez,44901
-televisor 82,87709.43,34.56,98.13,145.66,6,normal,vicente lopez,44887
-termotanques,37344.75,38.18,98.01,90.97,60,express,comuna 10,44908
-monitor,36310.15,79.52,98.0,148.58,10,express,comuna 7,44914
-secarropas,32279.94,84.1,97.65,57.06,65,express,comuna 5,44911
-termotanques,42781.24,31.95,94.61,179.48,80,normal,la matanza,44884
-heladeras,34890.10,39.94,92.79,37.24,70,diferido,comuna 1,44884
-webcam,15017.83,77.53,92.4,165.58,5,express,comuna 8,44897
-molinillos de granos de café,43541.10,99.03,92.3,88.22,5,diferido,comuna 3,44872
-calefones,57465.32,87.62,91.25,89.71,35,express,lanus,44868
-mouse,41727.42,10.73,90.1,93.02,5,normal,comuna 11,44926
-parlante,21238.53,69.88,89.99,131.89,10,express,comuna 1,44893
-televisor 62,96808.14,31.3,87.33,61.23,10,diferido,tres de febrero,44918
-webcam,26657.65,44.97,87.31,40.5,16,normal,san martin,44915
-mouse,45766.93,20.74,87.26,142.58,14,diferido,comuna 7,44921
-molinillos de granos de café,27265.86,26.85,85.31,95.83,16,diferido,comuna 10,44886
-televisor 62,79705.83,76.16,85.26,103.98,18,normal,san isidro,44911
-televisor 55,113253.40,47.74,84.9,51.6,17,express,tres de febrero,44868
-heladeras,31568.23,90.47,84.35,139.7,27,express,avellaneda,44878
-televisor 62,50854.50,22.91,82.99,26.56,26,diferido,comuna 13,44925
-calefones,49594.65,35.71,82.29,37.55,53,express,lomas de zamora,44874
-cafeteras,18438.99,28.92,82.22,55.03,26,diferido,comuna 11,44910
-televisor 90,82916.79,64.26,82.15,89.06,27,normal,moron,44869
-televisor 68,81632.37,64.55,81.67,107.35,36,diferido,comuna 13,44894
-teclado,34657.74,92.31,79.94,52.1,4,diferido,comuna 4,44885
-computadoras personales,20908.25,51.72,79.8,81.3,32,diferido,comuna 15,44904
-televisor 52,56517.98,90.7,79.78,152.99,18,diferido,lomas de zamora,44890
-televisor 90,67419.16,97.27,79.52,175.67,19,normal,comuna 2,44888
-freezers,34416.03,74.34,79.43,171.8,140,diferido,san martin,44905
-licuadoras,15223.10,64.33,79.05,74.15,134,express,comuna 12,44914
-televisor 68,25680.19,26.99,78.16,133.3,25,express,moron,44876
-televisor 68,39757.75,49.62,77.48,151.21,26,diferido,moron,44908
-impresoras,44229.55,98.23,77.33,65.84,15,diferido,avellaneda,44892
-televisor 75,29279.10,95.11,75.75,198.7,16,diferido,comuna 13,44882
-televisor 75,46780.86,14.47,75.6,173.1,17,express,comuna 5,44909
-disco solido,36948.84,67.2,75.02,64.49,18,diferido,moron,44896
-televisor 90,116598.01,75.75,74.94,59.43,18,normal,avellaneda,44869
-microondas,58699.77,36.23,74.68,13.12,25,normal,lanus,44881
-calefones,18300.56,86.87,74.59,99.22,48,express,comuna 15,44909
-televisor 82,43386.15,50.35,74.18,35.98,37,diferido,comuna 4,44897
-parlante,15199.88,20.91,73.85,184.2,53,diferido,comuna 12,44897
-calefones,16327.15,79.31,72.99,87.99,37,express,comuna 4,44872
-impresoras,22662.73,47.31,72.72,162.56,14,diferido,comuna 6,44925
-freezers,37884.44,95.17,72.36,151.41,140,express,san isidro,44913
-disco solido,20608.29,30.49,72.22,59.13,1,normal,comuna 12,44892
-teclado,43398.46,16.48,71.77,196.89,4,express,comuna 9,44891
-televisor 75,81561.72,12.85,71.53,30.55,14,diferido,comuna 6,44873
-televisor 82,38214.21,96.31,70.95,49.4,12,normal,comuna 9,44911
-televisor 82,90180.73,36.17,70.92,199.68,10,normal,lanus,44922
-computadoras personales,39573.81,28.54,70.39,10.07,8,diferido,comuna 9,44897
-webcam,45209.85,71.34,70.28,118.48,5,express,comuna 4,44883
-televisor 55,26167.25,13.5,70.23,173.72,16,express,comuna 2,44869
-termotanques,22839.51,65.93,69.73,11.51,17,express,comuna 6,44875
-televisor 55,108009.60,22.19,69.62,38.14,19,express,comuna 13,44907
-exprimidores,28851.29,13.62,69.15,15.92,16,diferido,comuna 5,44886
-televisor 75,67938.36,89.78,68.95,80.34,17,normal,comuna 6,44902
-impresoras,50570.03,76.57,68.94,79.18,15,express,comuna 15,44915
-cafeteras,47197.11,87.3,68.59,75.79,14,express,comuna 1,44921
-mouse,23332.94,44.9,67.35,76.67,3,normal,avellaneda,44914
-televisor 68,93479.74,70.37,66.64,24.49,5,diferido,comuna 3,44903
-webcam,31237.54,71.04,66.28,47.93,5,express,comuna 15,44895
-disco solido,20533.49,52.66,64.93,102.49,7,normal,san isidro,44905
-secarropas,31639.90,26.92,64.79,92.18,43,diferido,comuna 5,44907
-televisor 52,105151.41,71.63,64.28,35.88,23,express,lanus,44924
-secarropas,40613.05,69.24,63.69,189.38,45,express,comuna 12,44881
-televisor 90,23682.53,31.15,62.37,156.2,23,express,comuna 3,44902
-televisor 55,95857.33,71.06,61.57,119.06,23,normal,comuna 15,44879
-licuadoras,37858.64,48.01,61.04,24.64,12,express,avellaneda,44925
-exprimidores,34615.10,93.59,60.92,22.63,12,diferido,lomas de zamora,44889
-televisor 90,68531.86,24.61,60.71,126.72,18,diferido,comuna 15,44923
-televisor 75,31433.92,65.62,60.66,93.2,18,express,comuna 14,44890
-molinillos de granos de café,33626.73,28.33,60.18,12.4,10,express,la matanza,44871
-disco duro,57984.69,19.49,59.89,41.55,2,normal,comuna 2,44925
-secarropas,45039.93,63.77,58.07,68.36,43,express,tres de febrero,44921
-televisor 75,89746.91,73.85,57.0,10.44,23,diferido,comuna 9,44925
-heladeras,19541.17,28.33,56.82,165.4,65,diferido,comuna 14,44926
-ralladores,41215.80,11.65,56.8,81.17,5,express,lomas de zamora,44919
-computadoras personales,54717.03,11.42,56.5,51.66,15,normal,moron,44913
-webcam,45399.15,34.89,54.93,78.19,5,express,comuna 1,44904
-computadoras personales,15387.03,68.73,54.89,34.76,15,normal,comuna 3,44926
-televisor 68,51125.25,64.93,53.19,27.64,23,diferido,comuna 4,44880
-termotanques,44109.34,32.89,52.47,50.5,65,diferido,comuna 14,44901
-impresoras,54757.00,89.61,52.36,38.89,14,express,lanus,44899
-televisor 82,87914.98,83.86,52.19,101.83,14,normal,comuna 3,44876
-televisor 75,73437.18,84.24,51.38,42.44,18,normal,comuna 10,44880
-licuadoras,21852.52,67.56,51.32,98.58,5,normal,comuna 10,44883
-televisor 52,28705.62,33.73,50.59,134.41,18,express,comuna 12,44925
-disco duro,55335.92,36.17,50.28,11.06,2,diferido,avellaneda,44915
-teclado,42994.76,86.75,49.65,129.27,5,normal,comuna 11,44923
-calefones,22230.16,71.16,49.45,27.51,37,express,comuna 8,44878
-televisor 68,27702.20,37.91,48.74,187.66,18,normal,comuna 10,44887
-televisor 52,89470.28,52.11,48.71,119.21,18,normal,comuna 8,44892
-disco solido,54023.97,68.22,47.45,69.48,2,express,comuna 13,44871
-disco duro,36614.98,51.3,47.33,74.63,2,diferido,moron,44891
+monitor,18349.89,71.48,99.74,58.58,10,diferido,Barrio-Norte,44903
+impresoras,57644.43,14.46,99.03,47.06,5,diferido,Varela,44901
+televisor 82,87709.43,34.56,98.13,145.66,6,normal,Varela,44887
+termotanques,37344.75,38.18,98.01,90.97,60,express,Saavedra,44908
+monitor,36310.15,79.52,98.0,148.58,10,express,San-Telmo,44914
+secarropas,32279.94,84.1,97.65,57.06,65,express,Retiro,44911
+termotanques,42781.24,31.95,94.61,179.48,80,normal,San-Telmo,44884
+heladeras,34890.10,39.94,92.79,37.24,70,diferido,Boedo,44884
+webcam,15017.83,77.53,92.4,165.58,5,express,Retiro,44897
+molinillos de granos de café,43541.10,99.03,92.3,88.22,5,diferido,Belgrano,44872
+calefones,57465.32,87.62,91.25,89.71,35,express,Boedo,44868
+mouse,41727.42,10.73,90.1,93.02,5,normal,Caballito,44926
+parlante,21238.53,69.88,89.99,131.89,10,express,Caballito,44893
+televisor 62,96808.14,31.3,87.33,61.23,10,diferido,Agronomia,44918
+webcam,26657.65,44.97,87.31,40.5,16,normal,Boedo,44915
+mouse,45766.93,20.74,87.26,142.58,14,diferido,Agronomia,44921
+molinillos de granos de café,27265.86,26.85,85.31,95.83,16,diferido,Varela,44886
+televisor 62,79705.83,76.16,85.26,103.98,18,normal,Barrio-Norte,44911
+televisor 55,113253.40,47.74,84.9,51.6,17,express,Saavedra,44868
+heladeras,31568.23,90.47,84.35,139.7,27,express,San-Telmo,44878
+televisor 62,50854.50,22.91,82.99,26.56,26,diferido,Congreso,44925
+calefones,49594.65,35.71,82.29,37.55,53,express,Epuyen,44874
+cafeteras,18438.99,28.92,82.22,55.03,26,diferido,Flores,44910
+televisor 90,82916.79,64.26,82.15,89.06,27,normal,Floresta,44869
+televisor 68,81632.37,64.55,81.67,107.35,36,diferido,Flores,44894
+teclado,34657.74,92.31,79.94,52.1,4,diferido,Mataderos,44885
+computadoras personales,20908.25,51.72,79.8,81.3,32,diferido,Nueva-Chicago,44904
+televisor 52,56517.98,90.7,79.78,152.99,18,diferido,Palermo,44890
+televisor 90,67419.16,97.27,79.52,175.67,19,normal,Nueva-Pompeya,44888
+freezers,34416.03,74.34,79.43,171.8,140,diferido,Nueva-Chicago,44905
+licuadoras,15223.10,64.33,79.05,74.15,134,express,Parque-Patricios,44914
+televisor 68,25680.19,26.99,78.16,133.3,25,express,Palermo,44876
+televisor 68,39757.75,49.62,77.48,151.21,26,diferido,Palermo,44908
+impresoras,44229.55,98.23,77.33,65.84,15,diferido,Barracas,44892
+televisor 75,29279.10,95.11,75.75,198.7,16,diferido,Nunez,44882
+televisor 75,46780.86,14.47,75.6,173.1,17,express,Nunez,44909
+disco solido,36948.84,67.2,75.02,64.49,18,diferido,Flores,44896
+televisor 90,116598.01,75.75,74.94,59.43,18,normal,Floresta,44869
+microondas,58699.77,36.23,74.68,13.12,25,normal,Agronomia,44881
+calefones,18300.56,86.87,74.59,99.22,48,express,Congreso,44909
+televisor 82,43386.15,50.35,74.18,35.98,37,diferido,Epuyen,44897
+parlante,15199.88,20.91,73.85,184.2,53,diferido,Saavedra,44897
+calefones,16327.15,79.31,72.99,87.99,37,express,Barrio-Norte,44872
+impresoras,22662.73,47.31,72.72,162.56,14,diferido,Paternal,44925
+freezers,37884.44,95.17,72.36,151.41,140,express,Caballito,44913
+disco solido,20608.29,30.49,72.22,59.13,1,normal,Boedo,44892
+teclado,43398.46,16.48,71.77,196.89,4,express,Nueva-Pompeya,44891
+televisor 75,81561.72,12.85,71.53,30.55,14,diferido,Palermo,44873
+televisor 82,38214.21,96.31,70.95,49.4,12,normal,Congreso,44911
+televisor 82,90180.73,36.17,70.92,199.68,10,normal,Recoleta,44922
+computadoras personales,39573.81,28.54,70.39,10.07,8,diferido,Retiro,44897
+webcam,45209.85,71.34,70.28,118.48,5,express,Villa-Devoto,44883
+televisor 55,26167.25,13.5,70.23,173.72,16,express,Villa-Luro,44869
+termotanques,22839.51,65.93,69.73,11.51,17,express,San-Cristobal,44875
+televisor 55,108009.60,22.19,69.62,38.14,19,express,Puerto-Madero,44907
+exprimidores,28851.29,13.62,69.15,15.92,16,diferido,Primera-Junta,44886
+televisor 75,67938.36,89.78,68.95,80.34,17,normal,Parque-Chas,44902
+impresoras,50570.03,76.57,68.94,79.18,15,express,Mataderos,44915
+cafeteras,47197.11,87.3,68.59,75.79,14,express,Constitucion,44921
+mouse,23332.94,44.9,67.35,76.67,3,normal,Congreso,44914
+televisor 68,93479.74,70.37,66.64,24.49,5,diferido,Boedo,44903
+webcam,31237.54,71.04,66.28,47.93,5,express,Caballito,44895
+disco solido,20533.49,52.66,64.93,102.49,7,normal,Retiro,44905
+secarropas,31639.90,26.92,64.79,92.18,43,diferido,Barrio-Norte,44907
+televisor 52,105151.41,71.63,64.28,35.88,23,express,Congreso,44924
+secarropas,40613.05,69.24,63.69,189.38,45,express,Recoleta,44881
+televisor 90,23682.53,31.15,62.37,156.2,23,express,Palermo,44902
+televisor 55,95857.33,71.06,61.57,119.06,23,normal,Nueva-Pompeya,44879
+licuadoras,37858.64,48.01,61.04,24.64,12,express,Paternal,44925
+exprimidores,34615.10,93.59,60.92,22.63,12,diferido,Epuyen,44889
+televisor 90,68531.86,24.61,60.71,126.72,18,diferido,Colegiales,44923
+televisor 75,31433.92,65.62,60.66,93.2,18,express,Boca,44890
+molinillos de granos de café,33626.73,28.33,60.18,12.4,10,express,Belgrano,44871
+disco duro,57984.69,19.49,59.89,41.55,2,normal,Barracas,44925
+secarropas,45039.93,63.77,58.07,68.36,43,express,Almagro,44921
+televisor 75,89746.91,73.85,57.0,10.44,23,diferido,Agronomia,44925
+heladeras,19541.17,28.33,56.82,165.4,65,diferido,Calaza,44926
+ralladores,41215.80,11.65,56.8,81.17,5,express,Mataderos,44919
+computadoras personales,54717.03,11.42,56.5,51.66,15,normal,Palermo,44913
+webcam,45399.15,34.89,54.93,78.19,5,express,Parque-Chacabuco,44904
+computadoras personales,15387.03,68.73,54.89,34.76,15,normal,Nunez,44926
+televisor 68,51125.25,64.93,53.19,27.64,23,diferido,Palermo,44880
+termotanques,44109.34,32.89,52.47,50.5,65,diferido,Paternal,44901
+impresoras,54757.00,89.61,52.36,38.89,14,express,Caballito,44899
+televisor 82,87914.98,83.86,52.19,101.83,14,normal,Boedo,44876
+televisor 75,73437.18,84.24,51.38,42.44,18,normal,Recoleta,44880
+licuadoras,21852.52,67.56,51.32,98.58,5,normal,Retiro,44883
+televisor 52,28705.62,33.73,50.59,134.41,18,express,Mataderos,44925
+disco duro,55335.92,36.17,50.28,11.06,2,diferido,Monte-Castro,44915
+teclado,42994.76,86.75,49.65,129.27,5,normal,Flores,44923
+calefones,22230.16,71.16,49.45,27.51,37,express,Colegiales,44878
+televisor 68,27702.20,37.91,48.74,187.66,18,normal,Barrio-Norte,44887
+televisor 52,89470.28,52.11,48.71,119.21,18,normal,Agronomia,44892
+disco solido,54023.97,68.22,47.45,69.48,2,express,Congreso,44871
+disco duro,36614.98,51.3,47.33,74.63,2,diferido,Constitucion,44891
 disco duro,44677.04,14.25,45.69,86.56,2,express,comuna 13,44878
 mouse,35155.38,99.72,45.58,188.68,3,normal,san martin,44925
 ralladores,32753.77,20.78,45.05,84.3,5,express,comuna 9,44902
