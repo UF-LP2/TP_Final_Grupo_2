@@ -55,27 +55,27 @@ namespace tp_final.Properties
         {
             for (int i = 0; i < lista_pedidos.Count; i++)
             {
-                if(lista_pedidos[i].prioridad == "EXPRESS")
+                if(lista_pedidos[i].prioridad == "express")
                 {
                     lista_pedidos[i].valor = 1;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].prioridad == "NORMAL")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].prioridad == "normal")
                 {   
                     lista_pedidos[i].valor = 1;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "NORMAL")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "normal")
                 {
                     lista_pedidos[i].valor = 2;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "DIFERIDO")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "diferido")
                 {
                     lista_pedidos[i].valor = 3;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].prioridad == "DIFERIDO")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].prioridad == "diferido")
                 {
                     lista_pedidos[i].valor = 2;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 72 && lista_pedidos[i].prioridad == "DIFERIDO")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 72 && lista_pedidos[i].prioridad == "diferido")
                 {
                     lista_pedidos[i].valor = 1;
                 }
