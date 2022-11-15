@@ -51,36 +51,40 @@ namespace tp_final.Properties
         {
             Console.WriteLine(Coordenadas.Count);
         }
-        public void Actualiacionfechas()
+        public void Actualizacionfechas() //actualizo el valor de los pedidos a partir de la cantidad de horas que pasaron desde su compra
         {
             for (int i = 0; i < lista_pedidos.Count; i++)
             {
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].tipo == "NORMAL")
+                if(lista_pedidos[i].prioridad == "EXPRESS")
+                {
+                    lista_pedidos[i].valor = 1;
+                }
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].prioridad == "NORMAL")
                 {   
-                    lista_pedidos[i].prioridad = 1;
+                    lista_pedidos[i].valor = 1;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].tipo == "NORMAL")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "NORMAL")
                 {
-                    lista_pedidos[i].prioridad = 2;
+                    lista_pedidos[i].valor = 2;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].tipo == "DIFERIDO")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "DIFERIDO")
                 {
-                    lista_pedidos[i].prioridad = 3;
+                    lista_pedidos[i].valor = 3;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].tipo == "DIFERIDO")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].prioridad == "DIFERIDO")
                 {
-                    lista_pedidos[i].prioridad = 2;
+                    lista_pedidos[i].valor = 2;
                 }
-                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 72 && lista_pedidos[i].tipo == "DIFERIDO")
+                if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 72 && lista_pedidos[i].prioridad == "DIFERIDO")
                 {
-                    lista_pedidos[i].prioridad = 1;
+                    lista_pedidos[i].valor = 1;
                 }
             }
         }
 
         public void Llenado(Class_Vehiculo vehiculo)
         {
-            Class_Pedido pedido_aux = new Class_Pedido();
+            Class_Pedido pedido_aux;
             int i, j;
             float sumVol = 0;
             int newCantPedidos = 0;
@@ -89,7 +93,7 @@ namespace tp_final.Properties
             for (i = 0; i < lista_pedidos.Count - 1; i++)    //ordeno segun prioridad de mayor prioridad (1) a menor
             {
                 for (j = i + 1; j < lista_pedidos.Count; j++)
-                    if (lista_pedidos[i].prioridad > lista_pedidos[j].prioridad)
+                    if (lista_pedidos[i].valor > lista_pedidos[j].valor)
                     {
                         pedido_aux = lista_pedidos[i];
                         lista_pedidos[i] = lista_pedidos[j];
@@ -97,7 +101,7 @@ namespace tp_final.Properties
                     }
             }
 
-            for (i = 0; i < lista_pedidos.Count; i++)   //me fijo en terminos de volimen cuantos pedidos entran
+            for (i = 0; i < lista_pedidos.Count; i++)   //me fijo en terminos de volumen cuantos pedidos entran
             {
                 if (sumVol + lista_pedidos[i].volumen < vehiculo.Vol_Max && lista_pedidos[i].cargado == false)
                 {
@@ -118,9 +122,9 @@ namespace tp_final.Properties
                     }
                     else if (lista_pedidos[i - 1].peso <= j)
                     {
-                        matriz[i, j] = Math.Max(lista_pedidos[i - 1].prioridad + matriz[i - 1, j - lista_pedidos[i - 1].peso],
+                        matriz[i, j] = Math.Max(lista_pedidos[i - 1].valor + matriz[i - 1, j - lista_pedidos[i - 1].peso],
                                                   matriz[i - 1, j]);
-                        if (lista_pedidos[i - 1].prioridad + matriz[i - 1, j - lista_pedidos[i - 1].peso] > matriz[i - 1, j]
+                        if (lista_pedidos[i - 1].valor + matriz[i - 1, j - lista_pedidos[i - 1].peso] > matriz[i - 1, j]
                             && lista_pedidos[i - 1].cargado == false
                             && sumPeso + lista_pedidos[i - 1].peso < vehiculo.Peso_Max)
                         {

@@ -48,41 +48,41 @@ namespace tp_final.Properties
             this.Pedidos = new List<Class_Pedido>();
         }
         
-        public void Recorrido()
-        {
-            float min, DistanciaTot = 0;
-            for(int i = 0; i < Pedidos.Count - 1; i++)
-            {
-                for(int j = 0; j < Pedidos.Count - 1; j++)
-                {
-                    if(DistanciaKm() < min || i == 0)
-                    {
-                        min = DistanciaKm(coordenadas[recorrido[k]], lista - getlista()[i]);
-                        int k = 1;
-                        recorrido[k] = aux->listaProd->getLista()[i];
-                        k++;
-                        aux->listaProd->Eliminar(i);
-                    }
-                }
-                DistanciaTot += min;
-            }
+        //public void Recorrido()
+        //{
+        //    float min, DistanciaTot = 0;
+        //    for(int i = 0; i < Pedidos.Count - 1; i++)
+        //    {
+        //        for(int j = 0; j < Pedidos.Count - 1; j++)
+        //        {
+        //            if(DistanciaKm() < min || i == 0)
+        //            {
+        //                min = DistanciaKm(coordenadas[recorrido[k]], lista - getlista()[i]);
+        //                int k = 1;
+        //                recorrido[k] = aux->listaProd->getLista()[i];
+        //                k++;
+        //                aux->listaProd->Eliminar(i);
+        //            }
+        //        }
+        //        DistanciaTot += min;
+        //    }
 
-        }
+        //}
 
-        public static float DistanciaKm()
-        {
-            float RadTierra = 6378.0F;
+        //public static float DistanciaKm()
+        //{
+        //    float RadTierra = 6378.0F;
 
-            var difLatitud = (posDestino.Latitud – posOrigen.Latitud).EnRadianes();
-            var difLongitud = (posDestino.Longitud - posOrigen.Longitud).EnRadianes();
+        //    var difLatitud = (posDestino.Latitud – posOrigen.Latitud).EnRadianes();
+        //    var difLongitud = (posDestino.Longitud - posOrigen.Longitud).EnRadianes();
 
 
-            var a = Math.Sin(difLatitud / 2).AlCuadrado() +
-                      Math.Cos(posOrigen.Latitud.EnRadianes()) *
-                      Math.Cos(posDestino.Latitud.EnRadianes()) *
-                      Math.Sin(difLongitud / 2).AlCuadrado();
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 – a));
-            return RadTierra * c;
-        }
+        //    var a = Math.Sin(difLatitud / 2).AlCuadrado() +
+        //              Math.Cos(posOrigen.Latitud.EnRadianes()) *
+        //              Math.Cos(posDestino.Latitud.EnRadianes()) *
+        //              Math.Sin(difLongitud / 2).AlCuadrado();
+        //    var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 – a));
+        //    return RadTierra * c;
+        //}
     }
 }
