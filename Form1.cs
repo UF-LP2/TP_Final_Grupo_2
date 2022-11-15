@@ -7,12 +7,15 @@ public partial class Form1 : Form
 {
     public Form1()
     {
-        /*
+        
         InitializeComponent();
-        var csv_ = new csvfiles._csv();
-        List<Pedido> Pedidos = csv_.read_csv();
+        
+
+
         Class_Almacen Liniers = new Class_Almacen();
-        Liniers.Mostrar_Algo();*/
+
+
+        
         Class_Vehiculo vehiculo = new Class_Furgoneta();
         List<Pedido> prueba = new List<Pedido>();
         Pedido pedido1 = new Pedido();

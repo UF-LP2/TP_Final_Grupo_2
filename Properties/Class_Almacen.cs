@@ -22,26 +22,39 @@ namespace tp_final.Properties
 {
     public class Class_Almacen
     {
-        public Dictionary<string, (string, string)> Coordenadas { get; }
-        List<string> CoordenadasList { get; }
-        List<Class_Pedido> lista_pedidos { get; }
+        List<Pedido> lista_pedidos { get; }
         public Class_Almacen()
         {
-            
+            var csv_ = new csvfiles._csv();
+            lista_pedidos = csv_.read_csv();
+            InicializarValor();
         }
 
-        
+        public void InicializarValor()
+        {
+            for(int i = 0; i< lista_pedidos.Count; i++)
+            {
+                if (lista_pedidos[i].prioridad == "express")
+                {
+                    lista_pedidos[i].valor = 3;
+                }else if (lista_pedidos[i].prioridad == "normal")
+                {
+                    lista_pedidos[i].valor = 2;
+                }
+                else
+                {
+                    lista_pedidos[i].valor = 1;
+                }
+            }
+        }
+
         public void Actualizacionfechas() //actualizo el valor de los pedidos a partir de la cantidad de horas que pasaron desde su compra
         {
             for (int i = 0; i < lista_pedidos.Count; i++)
             {
-                if(lista_pedidos[i].prioridad == "express")
-                {
-                    lista_pedidos[i].valor = 1;
-                }
                 if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour  == 48 && lista_pedidos[i].prioridad == "normal")
                 {   
-                    lista_pedidos[i].valor = 1;
+                    lista_pedidos[i].valor = 3;
                 }
                 if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "normal")
                 {
@@ -49,7 +62,7 @@ namespace tp_final.Properties
                 }
                 if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 24 && lista_pedidos[i].prioridad == "diferido")
                 {
-                    lista_pedidos[i].valor = 3;
+                    lista_pedidos[i].valor = 1;
                 }
                 if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 48 && lista_pedidos[i].prioridad == "diferido")
                 {
@@ -57,14 +70,14 @@ namespace tp_final.Properties
                 }
                 if (DateTime.Today.Hour - lista_pedidos[i].fecha.Hour == 72 && lista_pedidos[i].prioridad == "diferido")
                 {
-                    lista_pedidos[i].valor = 1;
+                    lista_pedidos[i].valor = 3;
                 }
             }
         }
 
         public void Llenado(Class_Vehiculo vehiculo)
         {
-            Class_Pedido pedido_aux;
+            Pedido pedido_aux;
             int i, j;
             float sumVol = 0;
             int newCantPedidos = 0;
