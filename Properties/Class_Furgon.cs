@@ -11,6 +11,6 @@ namespace tp_final.Properties
 {
     public class Class_Furgon : Class_Vehiculo
     {
-        public Class_Furgon() : base(219, 725.4F, 289.4F, 2519, 100, 1.2F) { }
+        public Class_Furgon() : base(219, 725.4F, 289.4F, 2519, 100, 5.94F) { }
     }
 }

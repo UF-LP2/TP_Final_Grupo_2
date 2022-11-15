@@ -10,6 +10,6 @@ namespace tp_final.Properties
 {
     public class Class_Camioneta : Class_Vehiculo
     {
-        public Class_Camioneta() : base(176, 439.7F, 186, 688, 50, 1.2F) { }
+        public Class_Camioneta() : base(176, 439.7F, 186, 688, 50, 1.5F) { }
     }
 }

@@ -79,11 +79,21 @@ namespace tp_final.Properties
             }
             Recorrido.Enqueue("Liniers");
             DistanciaTot += DistanciaKm(Inicial, "Liniers");
+            float autonomia = CalculoAutonomia();
+
+            if(DistanciaTot > autonomia)
+            {
+                Console.WriteLine("El recorrido es muy largo debera cargar nafta para completarlo");
+            }
+            else
+                Console.WriteLine("El recorrido se completara sin problemas");
         }
         public string NodosMasCercano(string Inicial, List<string> Nodos)
         {
             float min = 0;
             string aux = "error";
+            float autonomia= CalculoAutonomia();
+
             for (int i = 0; i < Nodos.Count; i++)
             {
                 if (DistanciaKm(Inicial, Nodos[i]) < min || i == 0)
@@ -93,6 +103,10 @@ namespace tp_final.Properties
                 }
             }
             DistanciaTot += min;
+            if(DistanciaTot > autonomia)
+            {
+                Console.WriteLine("En el barrio: %d se debera cargar combustible",aux);
+            }
             return aux;
         }
         public List<string> FiltrarRepetidos()
@@ -143,5 +157,11 @@ namespace tp_final.Properties
             return value;
         }
 
+        public float CalculoAutonomia()
+        {
+            float autonomia = (Capacidad_Tanque * 100) / Consumo_Tanque;
+
+            return autonomia;
+        }
     }
 }
