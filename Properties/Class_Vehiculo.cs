@@ -24,13 +24,14 @@ namespace tp_final.Properties
         protected float Ancho_Max;
         protected float Largo_Max;
         protected float Alto_Max;
+        protected float DistanciaTot;
         
         public int Peso_Max { get; set; }
         public int Vol_Max { get; set; }
         public int Capacidad_Tanque { get; }
         public float Consumo_Tanque { get; }
 
-        public List<Class_Pedido> Pedidos { get; set; }
+        public List<Pedido> Pedidos { get; set; }
 
         public Queue<string> Recorrido { get; set; }
 
@@ -48,9 +49,10 @@ namespace tp_final.Properties
             this.Alto_Max = Alto_Max;
             this.Peso_Max = Peso_Max;
             this.Vol_Max = Convert.ToInt32(Alto_Max * Largo_Max * Ancho_Max);
-            this.Pedidos = new List<Class_Pedido>();
+            this.Pedidos = new List<Pedido>();
             this.Recorrido = new Queue<string>();
             Coordenadas = CargarCoordenadas();
+            DistanciaTot = 0;
         }
         
         public void Recorrido()
@@ -76,7 +78,11 @@ namespace tp_final.Properties
 
         public static float DistanciaKm()
         {
-            float RadTierra = 6378.0F;
+            
+            var random = new Random();
+
+            var value = random.Next(1, 100000);
+            /*float RadTierra = 6378.0F;
 
         //    var difLatitud = (posDestino.Latitud – posOrigen.Latitud).EnRadianes();
         //    var difLongitud = (posDestino.Longitud - posOrigen.Longitud).EnRadianes();
@@ -87,7 +93,8 @@ namespace tp_final.Properties
                       Math.Cos(posDestino.Latitud.EnRadianes()) *
                       Math.Sin(difLongitud / 2).AlCuadrado();
             var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 – a));
-            return RadTierra * c;
+            return RadTierra * c;*/
+            return value;
         }
     }
 }
