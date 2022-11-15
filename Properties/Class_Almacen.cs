@@ -27,30 +27,10 @@ namespace tp_final.Properties
         List<Class_Pedido> lista_pedidos { get; }
         public Class_Almacen()
         {
-            Coordenadas = CargarCoordenadas();
+            
         }
 
-        public Dictionary<string, (string, string)> CargarCoordenadas()
-        {
-            Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
-            string ubicacionArchivo = "D:\\Repos\\TP_Final_Grupo_2\\Coordenadas.csv";
-            System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
-            string separador = ",";
-            string linea;
-
-            // Si el archivo no tiene encabezado, elimina la siguiente línea
-            archivo.ReadLine(); // Leer la primera línea pero descartarla porque es el encabezado
-            while ((linea = archivo.ReadLine()) != null)
-            {
-                string[] fila = linea.Split(separador);
-                Coordenadas.Add(fila[0], (fila[1], fila[2]));
-            }
-            return Coordenadas;
-        }
-        public void Mostrar_Algo()
-        {
-            Console.WriteLine(Coordenadas.Count);
-        }
+        
         public void Actualizacionfechas() //actualizo el valor de los pedidos a partir de la cantidad de horas que pasaron desde su compra
         {
             for (int i = 0; i < lista_pedidos.Count; i++)
