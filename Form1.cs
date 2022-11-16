@@ -12,12 +12,12 @@ public partial class Form1 : Form
         
 
 
-        Class_Almacen Liniers = new Class_Almacen();
+        //Class_Almacen Liniers = new Class_Almacen();
 
 
         
         Class_Vehiculo vehiculo = new Class_Furgoneta();
-        List<Pedido> prueba = new List<Pedido>();
+        /*List<Pedido> prueba = new List<Pedido>();
         Pedido pedido1 = new Pedido();
         Pedido pedido2 = new Pedido();
         Pedido pedido3 = new Pedido();
@@ -35,9 +35,13 @@ public partial class Form1 : Form
         prueba.Add(pedido3);
         prueba.Add(pedido4);
         prueba.Add(pedido5);
-        prueba.Add(pedido6);
-        vehiculo.setVol_Max(17000000);
-        Liniers.Llenado(vehiculo);
+        prueba.Add(pedido6);*/
+
+        //Console.WriteLine(vehiculo.Coordenadas["Liniers"]);
+        double aux = vehiculo.DistanciaKm("Liniers", "Colegiales");
+
+        Console.Write(aux);
+
         //vehiculo.setLista(prueba);
         //vehiculo.CargarRecorrido();
         //vehiculo.MostrarAlgo();
