@@ -9,7 +9,7 @@ namespace tp_final.Properties
 {
     public class Class_Furgoneta : Class_Vehiculo
     {
-        public Class_Furgoneta() : base(188, 436.3F, 205.4F, 2060, 125, 6.9F) { }
+        public Class_Furgoneta() : base(188, 436.3F, 205.4F, 2060, 125, 6.9F, "Ducato la del abuelo") { }
        
 
     }

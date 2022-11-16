@@ -10,6 +10,6 @@ namespace tp_final.Properties
 {
     public class Class_Camioneta : Class_Vehiculo
     {
-        public Class_Camioneta() : base(144.1F, 309.2F, 123.3F, 688, 50, 1.5F) { }
+        public Class_Camioneta() : base(144.1F, 309.2F, 123.3F, 688, 50, 1.5F, "Kango Express") { }
     }
 }

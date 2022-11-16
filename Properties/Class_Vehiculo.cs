@@ -28,6 +28,8 @@ namespace tp_final.Properties
         protected float Alto_Max;
         protected double DistanciaTot;
 
+        public string Nombre { get; set; }
+
         public int Peso_Max { get; set; }
         public int Vol_Max { get; set; }
         public int Capacidad_Tanque { get; }
@@ -41,7 +43,7 @@ namespace tp_final.Properties
 
         public Dictionary<string, (string, string)> Coordenadas { get; }
 
-        public Class_Vehiculo(float Ancho_Max, float Largo_Max, float Alto_Max, int Peso_Max, int Capacidad_Tanque, float Consumo_Tanque)
+        public Class_Vehiculo(float Ancho_Max, float Largo_Max, float Alto_Max, int Peso_Max, int Capacidad_Tanque, float Consumo_Tanque,string Nombre)
         {
             this.ID = Max_ID++;
             this.Consumo_Tanque = Consumo_Tanque;
@@ -56,6 +58,7 @@ namespace tp_final.Properties
             this.Coordenadas = new Dictionary<string, (string, string)>();
             this.Coordenadas = CargarCoordenadas();
             this.DistanciaTot = 0;
+            this.Nombre = Nombre;
         }
         public void setLista(List<Pedido> Aux)
         {

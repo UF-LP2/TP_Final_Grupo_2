@@ -22,7 +22,7 @@ namespace tp_final.Properties
 {
     public class Class_Almacen
     {
-        List<Pedido> lista_pedidos { get; }
+        public List<Pedido> lista_pedidos { get; }
         public Class_Almacen()
         {
             var csv_ = new csvfiles._csv();
@@ -76,7 +76,8 @@ namespace tp_final.Properties
         }
         public void MostrarListaTotal()
         {
-            Console.WriteLine("LISTA EN ALMACEN: ");
+            Console.WriteLine("Pedidos a la espera de ser entregados: {0}",lista_pedidos.Count);
+            
             for (int k = 0; k < lista_pedidos.Count; k++)
             {
                 Console.WriteLine("{0}", lista_pedidos[k].producto);
@@ -146,7 +147,7 @@ namespace tp_final.Properties
                     lista_pedidos.Remove(lista_pedidos [k]);
             }
 
-            Console.WriteLine("LISTA EN VEHÍCULO {0}: ", vehiculo.ID);
+            Console.WriteLine("LISTA EN {0}: ", vehiculo.Nombre);
             for (int k = 0; k < vehiculo.Pedidos.Count; k++)
             {
                 Console.WriteLine("{0}", vehiculo.Pedidos[k].producto);

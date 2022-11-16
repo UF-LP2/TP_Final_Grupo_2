@@ -19,9 +19,15 @@ public partial class Form1 : Form
 
 
         Liniers.Actualizacionfechas();
+
         Liniers.Llenado(vehiculo1);
         vehiculo1.CargarRecorrido();
         vehiculo1.MostrarLista();
+
+        Console.ReadKey();
+        Console.Clear();
+
+        Liniers.MostrarListaTotal();
 
         Console.ReadKey();
         Console.Clear();
@@ -33,12 +39,48 @@ public partial class Form1 : Form
         Console.ReadKey();
         Console.Clear();
 
+        Liniers.MostrarListaTotal();
+
+        Console.ReadKey();
+        Console.Clear();
+
         Liniers.Llenado(vehiculo3);
         vehiculo3.CargarRecorrido();
         vehiculo3.MostrarLista();
 
+        Console.ReadKey();
+        Console.Clear();
+
         Liniers.MostrarListaTotal();
-       
+
+        Console.ReadKey();
+        Console.Clear();
+
+        int cont = 0;
+        while(cont < 3 && Liniers.lista_pedidos.Count != 0)
+        {
+            Liniers.Llenado(vehiculo3);
+            vehiculo3.CargarRecorrido();
+            vehiculo3.MostrarLista();
+
+            Console.ReadKey();
+            Console.Clear();
+
+            Liniers.MostrarListaTotal();
+
+            Console.ReadKey();
+            Console.Clear();
+            cont++;
+        }
+
+        Liniers.MostrarListaTotal();
+
+        Console.ReadKey();
+        Console.Clear();
+
+
+
+
     }
 
     private void Form1_Load(object sender, EventArgs e)

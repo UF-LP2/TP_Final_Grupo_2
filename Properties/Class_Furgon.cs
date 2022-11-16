@@ -11,6 +11,6 @@ namespace tp_final.Properties
 {
     public class Class_Furgon : Class_Vehiculo
     {
-        public Class_Furgon() : base(182,310.4F, 194.4F, 2519, 100, 5.94F) { }
+        public Class_Furgon() : base(182,310.4F, 194.4F, 2519, 100, 5.94F, "Furgon Iveco Daily") { }
     }
 }
