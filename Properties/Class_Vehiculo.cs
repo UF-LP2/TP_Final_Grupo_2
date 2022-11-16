@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +26,7 @@ namespace tp_final.Properties
         protected float Ancho_Max;
         protected float Largo_Max;
         protected float Alto_Max;
-        protected float DistanciaTot;
+        protected double DistanciaTot;
 
         public int Peso_Max { get; set; }
         public int Vol_Max { get; set; }
@@ -41,7 +43,7 @@ namespace tp_final.Properties
 
         public Class_Vehiculo(float Ancho_Max, float Largo_Max, float Alto_Max, int Peso_Max, int Capacidad_Tanque, float Consumo_Tanque)
         {
-            ID = Max_ID++;
+            this.ID = Max_ID++;
             this.Consumo_Tanque = Consumo_Tanque;
             this.Capacidad_Tanque = Capacidad_Tanque;
             this.Ancho_Max = Ancho_Max;
@@ -51,8 +53,9 @@ namespace tp_final.Properties
             this.Vol_Max = Convert.ToInt32(Alto_Max * Largo_Max * Ancho_Max);
             this.Pedidos = new List<Pedido>();
             this.Recorrido = new Queue<string>();
-            Coordenadas = CargarCoordenadas();
-            DistanciaTot = 0;
+            this.Coordenadas = new Dictionary<string, (string, string)>();
+            this.Coordenadas = CargarCoordenadas();
+            this.DistanciaTot = 0;
         }
         public void setLista(List<Pedido> Aux)
         {
@@ -91,7 +94,7 @@ namespace tp_final.Properties
         }
         public string NodosMasCercano(string Inicial, List<string> Nodos)
         {
-            float min = 0;
+            double min = 0;
             string aux = "error";
             float autonomia= CalculoAutonomia();
 
@@ -123,7 +126,7 @@ namespace tp_final.Properties
         public Dictionary<string, (string, string)> CargarCoordenadas()
         {
             Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
-            string ubicacionArchivo = "C:\\Users\\Dolo\\source\\repos\\TP_Final_Grupo_2--\\Coordenadas.csv";
+            string ubicacionArchivo = "D:\\Repos\\TP_Final_Grupo_2\\Coordenadas.csv";
             System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
             string separador = ",";
             string linea;
@@ -137,25 +140,32 @@ namespace tp_final.Properties
             }
             return Coordenadas;
         }
-        public static float DistanciaKm(string Origen, string Destino)
+        public double DistanciaKm(string Origen, string Destino)
         {
 
-            var random = new Random();
+            
+            double PI = 3.1416;
+            (string v1, string v2) = Coordenadas[Origen];
+            float LatOri = float.Parse(v1, CultureInfo.InvariantCulture.NumberFormat);
+            float LongOri = float.Parse(v2, CultureInfo.InvariantCulture.NumberFormat);
+            (string v3, string v4) = Coordenadas[Destino];
+            float LatFin = float.Parse(v3, CultureInfo.InvariantCulture.NumberFormat);
+            float LongFin = float.Parse(v4, CultureInfo.InvariantCulture.NumberFormat);
 
-            var value = random.Next(1, 1000);
-            /*float RadTierra = 6378.0F;
+            
+            float RadTierra = 6378.0F;
 
-            var difLatitud = (posDestino.Latitud – posOrigen.Latitud).EnRadianes();
-            var difLongitud = (posDestino.Longitud - posOrigen.Longitud).EnRadianes();
+            double difLatitud = (LatFin - LatOri) * (PI/180);
+            double difLongitud = (LongFin - LongOri) * (PI / 180);
 
 
-            var a = Math.Sin(difLatitud / 2).AlCuadrado() +
-                      Math.Cos(posOrigen.Latitud.EnRadianes()) *
-                      Math.Cos(posDestino.Latitud.EnRadianes()) *
-                      Math.Sin(difLongitud / 2).AlCuadrado();
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 – a));
-            return RadTierra * c;*/
-            return value;
+            double a = Math.Sin(difLatitud / 2) * Math.Sin(difLatitud / 2) +
+                      Math.Cos(LatOri * (PI / 180)) *
+                      Math.Cos(LatFin * (PI / 180)) *
+                      Math.Sin(difLongitud / 2) * Math.Sin(difLongitud / 2);
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            return RadTierra * c;
+            
         }
 
         public float CalculoAutonomia()
