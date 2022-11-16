@@ -74,8 +74,16 @@ namespace tp_final.Properties
                 }
             }
         }
-
-        public void Llenado(Class_Vehiculo vehiculo)
+        public void MostrarListaTotal()
+        {
+            Console.WriteLine("LISTA EN ALMACEN: ");
+            for (int k = 0; k < lista_pedidos.Count; k++)
+            {
+                Console.WriteLine("{0}", lista_pedidos[k].producto);
+            }
+        }
+        
+    public void Llenado(Class_Vehiculo vehiculo)
         {
             Pedido pedido_aux;
             int i, j;
@@ -144,11 +152,7 @@ namespace tp_final.Properties
                 Console.WriteLine("{0}", vehiculo.Pedidos[k].producto);
             }
             Console.WriteLine("\n");
-            Console.WriteLine("LISTA EN ALMACEN: ");
-            for (int k = 0; k < lista_pedidos.Count; k++)
-            {
-                Console.WriteLine("{0}",lista_pedidos[k].producto);
-            }
+            
         }
         
     }

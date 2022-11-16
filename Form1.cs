@@ -10,44 +10,35 @@ public partial class Form1 : Form
         
         InitializeComponent();
         
+        Class_Almacen Liniers = new Class_Almacen();
 
 
-        //Class_Almacen Liniers = new Class_Almacen();
+        Class_Vehiculo vehiculo1 = new Class_Furgoneta();
+        Class_Vehiculo vehiculo2 = new Class_Furgon();
+        Class_Vehiculo vehiculo3 = new Class_Camioneta();
 
 
-        
-        Class_Vehiculo vehiculo = new Class_Furgoneta();
-        /*List<Pedido> prueba = new List<Pedido>();
-        Pedido pedido1 = new Pedido();
-        Pedido pedido2 = new Pedido();
-        Pedido pedido3 = new Pedido();
-        Pedido pedido4 = new Pedido();
-        Pedido pedido5 = new Pedido();
-        Pedido pedido6 = new Pedido();
-        pedido1.barrio = "Almirante-Brown";
-        pedido2.barrio = "Caballito";
-        pedido3.barrio = "Boedo";
-        pedido4.barrio = "Boedo";
-        pedido5.barrio = "Barracas";
-        pedido6.barrio = "Constitucion";
-        prueba.Add(pedido1);
-        prueba.Add(pedido2);
-        prueba.Add(pedido3);
-        prueba.Add(pedido4);
-        prueba.Add(pedido5);
-        prueba.Add(pedido6);*/
+        Liniers.Actualizacionfechas();
+        Liniers.Llenado(vehiculo1);
+        vehiculo1.CargarRecorrido();
+        vehiculo1.MostrarLista();
 
-        //Console.WriteLine(vehiculo.Coordenadas["Liniers"]);
-        double aux = vehiculo.DistanciaKm("Liniers", "Colegiales");
+        Console.ReadKey();
+        Console.Clear();
 
-        Console.Write(aux);
+        Liniers.Llenado(vehiculo2);
+        vehiculo2.CargarRecorrido();
+        vehiculo2.MostrarLista();
 
-        prueba.Add(pedido6);
-        Liniers.Llenado(vehiculo);
-        //vehiculo.setLista(prueba);
-        //vehiculo.CargarRecorrido();
-        //vehiculo.MostrarAlgo();
+        Console.ReadKey();
+        Console.Clear();
 
+        Liniers.Llenado(vehiculo3);
+        vehiculo3.CargarRecorrido();
+        vehiculo3.MostrarLista();
+
+        Liniers.MostrarListaTotal();
+       
     }
 
     private void Form1_Load(object sender, EventArgs e)

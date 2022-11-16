@@ -62,7 +62,7 @@ namespace tp_final.Properties
             this.Pedidos = Aux;
         }
 
-        public void MostrarAlgo()
+        public void MostrarLista()
         {
             for (int i = 0; Recorrido.Count != 0; i++)
             {
@@ -95,7 +95,7 @@ namespace tp_final.Properties
         public string NodosMasCercano(string Inicial, List<string> Nodos)
         {
             double min = 0;
-            string aux = "error";
+            string aux = "";
             float autonomia= CalculoAutonomia();
 
             for (int i = 0; i < Nodos.Count; i++)
@@ -126,7 +126,7 @@ namespace tp_final.Properties
         public Dictionary<string, (string, string)> CargarCoordenadas()
         {
             Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
-            string ubicacionArchivo = "D:\\Repos\\TP_Final_Grupo_2\\Coordenadas.csv";
+            string ubicacionArchivo = "C:\\Users\\Dolo\\source\\repos\\TP_Final_Grupo_2--\\Coordenadas.csv";
             System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
             string separador = ",";
             string linea;
