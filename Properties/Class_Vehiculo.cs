@@ -59,10 +59,6 @@ namespace tp_final.Properties
             this.Pedidos = Aux;
         }
 
-        public void setVol_Max(int volumen)
-        {
-            this.Vol_Max = volumen;
-        }
         public void MostrarAlgo()
         {
             for (int i = 0; Recorrido.Count != 0; i++)

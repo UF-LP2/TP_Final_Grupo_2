@@ -36,7 +36,6 @@ public partial class Form1 : Form
         prueba.Add(pedido4);
         prueba.Add(pedido5);
         prueba.Add(pedido6);
-        vehiculo.setVol_Max(17000000);
         Liniers.Llenado(vehiculo);
         //vehiculo.setLista(prueba);
         //vehiculo.CargarRecorrido();

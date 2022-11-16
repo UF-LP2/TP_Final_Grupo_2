@@ -138,12 +138,13 @@ namespace tp_final.Properties
                     lista_pedidos.Remove(lista_pedidos [k]);
             }
 
+            Console.WriteLine("LISTA EN VEHÍCULO {0}: ", vehiculo.ID);
             for (int k = 0; k < vehiculo.Pedidos.Count; k++)
             {
                 Console.WriteLine("{0}", vehiculo.Pedidos[k].producto);
             }
-
-            Console.WriteLine("LISTA EN ALMACEN");
+            Console.WriteLine("\n");
+            Console.WriteLine("LISTA EN ALMACEN: ");
             for (int k = 0; k < lista_pedidos.Count; k++)
             {
                 Console.WriteLine("{0}",lista_pedidos[k].producto);
