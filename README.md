@@ -1,8 +1,8 @@
 # TP Final - Grupo `02`
 ### Consigna
-    Consigna del TP Final
+    https://favaloro.tucampus.org/pluginfile.php/552205/mod_resource/content/1/TP-LII-2022.pdf
 ### Descripción
-    Descripción del proyecto
+    LLevar a código los algoritmos greedy y de programación dinámica entregados anteriormente.
 ### Integrantes
 - FRANCHINO, Dolores
 - SCAPELLATO, Federico
