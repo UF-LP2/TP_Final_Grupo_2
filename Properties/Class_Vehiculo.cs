@@ -82,7 +82,7 @@ namespace tp_final.Properties
                 Inicial = NodosMasCercano(Inicial, Nodos);
             }
             Recorrido.Enqueue("Liniers");
-            DistanciaTot += DistanciaKm(Inicial, "Liniers");
+
             float autonomia = CalculoAutonomia();
 
             if(DistanciaTot > autonomia)
@@ -97,20 +97,27 @@ namespace tp_final.Properties
             double min = 0;
             string aux = "";
             float autonomia= CalculoAutonomia();
-
-            for (int i = 0; i < Nodos.Count; i++)
+            if(Nodos.Count != 0)
             {
-                if (DistanciaKm(Inicial, Nodos[i]) < min || i == 0)
+                for (int i = 0; i < Nodos.Count; i++)
                 {
-                    min = DistanciaKm(Inicial, Nodos[i]);
-                    aux = Nodos[i];
+                    if (DistanciaKm(Inicial, Nodos[i]) < min || i == 0)
+                    {
+                        min = DistanciaKm(Inicial, Nodos[i]);
+                        aux = Nodos[i];
+                    }
                 }
             }
-            DistanciaTot += min;
-            if(DistanciaTot > autonomia)
+            else
             {
-                Console.WriteLine("En el barrio: {0} se debera cargar combustible",aux);
+                DistanciaTot += DistanciaKm(Inicial, "Liniers");
             }
+            DistanciaTot += min;
+            if (DistanciaTot > autonomia)
+            {
+                Console.WriteLine("En el barrio: {0} se debera cargar combustible", Inicial);
+            }
+
             return aux;
         }
         public List<string> FiltrarRepetidos()
@@ -126,7 +133,7 @@ namespace tp_final.Properties
         public Dictionary<string, (string, string)> CargarCoordenadas()
         {
             Dictionary<string, (string, string)> Coordenadas = new Dictionary<string, (string, string)>();
-            string ubicacionArchivo = "C:\\Users\\Dolo\\source\\repos\\TP_Final_Grupo_2--\\Coordenadas.csv";
+            string ubicacionArchivo = "D:\\Repos\\TP_Final_Grupo_2\\Coordenadas.csv";
             System.IO.StreamReader archivo = new System.IO.StreamReader(ubicacionArchivo);
             string separador = ",";
             string linea;
